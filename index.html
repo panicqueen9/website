@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Portfolio</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+}
+
+/* NAVIGATION */
+
+header {
+    padding: 1.5rem 3rem;
+    position: fixed;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 500px;
+    opacity: 0.8;
+}
+
+/* PROJECT GRID */
+
+.projects {
+    padding: 5rem 3rem;
+}
+
+.projects h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+    opacity: 0.6;
+}
+
+.project-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 5rem 3rem;
+    max-width: 800px;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 5rem 3rem;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    opacity: 0.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>DEIN NAME</h2>
+<ul>
+<li><a href="#projects">Projekte</a></li>
+<li><a href="#about">Über mich</a></li>
+<li><a href="#contact">Kontakt</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Creative Multimedia</h1>
+<p>Video, Motion Design und visuelle Storytelling Projekte.</p>
+</section>
+
+<section id="projects" class="projects">
+<h2>Projekte</h2>
+
+<div class="project-grid">
+
+<div class="project">
+<img src="https://picsum.photos/600/400" alt="">
+<div class="project-title">Projekt 1</div>
+</div>
+
+<div class="project">
+<img src="https://picsum.photos/601/400" alt="">
+<div class="project-title">Projekt 2</div>
+</div>
+
+<div class="project">
+<img src="https://picsum.photos/602/400" alt="">
+<div class="project-title">Projekt 3</div>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="about">
+<h2>Über mich</h2>
+<p>
+Hier kannst du dich vorstellen, deinen Stil erklären oder deine Skills zeigen.
+</p>
+</section>
+
+<section id="contact" class="contact">
+<h2>Kontakt</h2>
+<p>Email: deine@email.com</p>
+</section>
+
+<footer>
+<p>© 2026 Dein Name</p>
+</footer>
+
+</body>
+</html>
